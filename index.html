@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Portfolio Website | Nathan Dias</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="cover cover-left"></div>
+      <div class="cover cover-right">
+        <h1>Welcome to My Portfolio</h1>
+      </div>
+      <div class="book">
+        <!-- profile page -->
+        <div class="book-page page-left">
+          <div class="profile-page">
+            <img src="./Nathan_Dias.png" alt="" />
+            <h1>Nathan Dias</h1>
+            <h3 class="typewriter" id="heading"> </h3>
+            <div class="social-media">
+              <a href="https://www.linkedin.com/in/nathan-dias-07b367329"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <p>
+              Hi, I am Nathan Dias.
+              I am a motivated and ambitious technical intern/software developer with strong 
+              software development skills and leadership potential. I have experience in building, optimizing, and maintaining software systems, with a
+              passion for leading teams and driving innovative solutions.
+            </p>
+            <div class="btn-box">
+              <a href="https://drive.google.com/file/d/1vduwVEIMo0rPW68o_SLn0cGZB2-At0QX/view?usp=sharing" class="btn">View Resume</a>
+              <!-- <a href="#" class="btn contact-me">Contact Me</a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- page 1 & 2 -->
+        <div class="book-page page-right turn" id="turn-1">
+          <!-- page 1 (work experience) -->
+          <div class="page-front">
+            <h1 class="title">Work Experience</h1>
+            <div class="workeduc-box">
+              <div class="workeduc-content">
+                <span class="year"
+                  ><i class="bx bx-calendar"></i>July 2023 - May 2024</span
+                >
+                <h3>Technical Intern (Level 2) - ManTech International</h3>
+                <ul>
+                  <li>Enhanced a proprietary software system for the U.S. Army, 
+                    reducing system latency by 45% and improving speed by 25%.
+                  </li>
+                  <li>Utilized internal Large Language Models(LLMs) and Machine Learning(ML) Models to 
+                    accelerate development by 30%.
+                  </li>
+                  <li>
+                      Proactively gathered and evaluated customer feedback, leading cross-functional discussions that resulted in 
+                      improving user satisfaction by 70%.
+                  </li>
+                </ul>
+              </div>
+              <div class="workeduc-content">
+                  <span class="year"
+                    ><i class="bx bx-calendar"></i>May 2024 - Present</span
+                  >
+                  <h3>Technical Intern (Level 3) - ManTech International</h3>
+                  <ul>
+                    <li>Collaborated with project managers in planning and executing various projects, 
+                      to ensure adherence to project timelines and
+                        deliverables, in return reducing delivery timelines by 20%.
+                    </li>
+                    <li>Conducted over 50 comprehensive tests and analyses resulting
+                        in written recommendations that improved software performance 
+                        by 15% and reduced system bugs by 35%.
+                    </li>
+                    <li>
+                        Contributed to and drove software design discussions in order to 
+                        define project requirements and the necessary steps to
+                        meet those requirements from a technical standpoint.
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <span class="number-page">1</span>
+            <!-- next button -->
+            <span class="nextprev-btn" data-page="turn-1"
+              ><i class="bx bx-chevron-right"></i
+            ></span>
+          </div>
+
+          <!-- page 2 (education) -->
+          <div class="page-back">
+            <h1 class="title">Education</h1>
+
+            <div class="workeduc-box">
+              <div class="workeduc-content">
+                <span class="year"
+                  ><i class="bx bx-calendar"></i>Expected Graduation, May 2026</span
+                >
+                <h3>Bachelor's of Science in Applied Computer Science - George Mason University</h3>
+                <ul>
+                  <li><b>Concentration: </b> Software Engineering</li>
+                  <li><b>Related Coursework: </b> Software Usability and Design, Data Structures and Algorithms, Low-Level Programming, Object-
+                    Oriented Programming, Statistics, Data Science and Analysis</li>
+                </ul>
+              </div>
+            </div>
+
+            <span class="number-page">2</span>
+            <!-- prev button -->
+            <span class="nextprev-btn back" data-page="turn-1"
+              ><i class="bx bx-chevron-left"></i
+            ></span>
+          </div>
+        </div>
+
+        <!-- page 3 & 4 -->
+        <div class="book-page page-right turn" id="turn-2">
+          <!-- page 3 (my services) -->
+          <div class="page-front">
+            <h1 class="title">Certifications</h1>
+            <div class="services-box">
+              <div class="services-content">
+                <i class='bx bxl-google'></i>
+                <h3>Data Analytics Certificate</h3>
+                <p>Google</p>
+                <a href="https://drive.google.com/file/d/1sL2rgOVrMRnC_Tz31meTfH-Jhop24iSJ/view?usp=sharing" class="btn">View</a>
+              </div>
+            </div>
+            <span class="number-page">3</span>
+            <!-- next button -->
+            <span class="nextprev-btn" data-page="turn-2"
+              ><i class="bx bx-chevron-right"></i
+            ></span>
+          </div>
+
+          <!-- page 4 (my skills) -->
+          <div class="page-back">
+            <h1 class="title">Skills</h1>
+            <div class="skills-box">
+              <div class="skills-content">
+                <h3>Lnaguages</h3>
+                <div class="content">
+                  <span>Python</span>
+                  <span>Java</span>
+                  <span>C</span>
+                  <span>R</span>
+                  <span>JavaScript</span>
+                  <span>TypeScript</span>
+                  <span>SQL</span>
+                </div>
+                </div>
+                <div class="skills-content">
+                  <h3>Frameworks/Libraries</h3>
+                  <div class="content">
+                    <span>React</span>
+                    <span>Vue</span>
+                    <span>Node</span>
+                    <span>Next</span>
+                    <span>GraphQL</span>
+                    <span>Graphene</span>
+                    <span>Rest API</span>
+                    <span>SQL Server</span>
+                    <span>Material UI</span>
+                  </div>
+                </div>
+                <div class="skills-content">
+                  <h3>Developer Tools</h3>
+                  <div class="content">
+                    <span>Visual Studio</span>
+                    <span>VS Code</span>
+                    <span>SSMS</span>
+                    <span>Git</span>
+                    <span>Gitlab</span>
+                    <span>Docker</span>
+                  </div>
+                </div>
+                <div class="skills-content">
+                    <h3>Developer Documentation Tools</h3>
+                    <div class="content">
+                      <span>JIRA</span>
+                      <span>Confluence</span>
+                      <span>Word</span>
+                      <span>PowerPoint</span>
+                      <span>Excel</span>
+                      <span>Visio</span>
+                    </div>
+                  </div>
+                  <div class="skills-content">
+                      <h3>Development Process</h3>
+                      <div class="content">
+                        <span>Agile</span>
+                        <span>Scrum</span>
+                        <span>Sprint Planning</span>
+                      </div>
+                    </div>
+              </div>
+              <span class="number-page">4</span>
+              <!-- prev button -->
+              <span class="nextprev-btn back" data-page="turn-2"
+                ><i class="bx bx-chevron-left"></i
+              ></span>
+          </div>
+        </div>
+        <!-- page 5 & 6 -->
+        <div class="book-page page-right turn" id="turn-3">
+          <!-- page 5 (latest project or my portfolio) -->
+          <div class="page-front">
+            <h1 class="title">Projects</h1>
+            <div class="portfolio-box">
+              <div class="img-box">
+                <img src="./cardiacsaver.jpg" alt="" />
+              </div>
+              <div class="info-box">
+                <div class="info-title">
+                  <h3>Cardiacsaver</h3>
+                  <a href="https://devpost.com/software/heart-attack-detection"
+                    >Learn More<i class="bx bx-link-external"></i
+                  ></a>
+                </div>
+                <p>
+                    Built a heart attack predictor to notify patients at 
+                    risk of suffering from an imminent heart attack based on 
+                    their medical history.
+                </p>
+              </div>
+              <div class="img-box">
+                  <img src="./supporthaven.png" alt="" />
+                </div>
+                <div class="info-box">
+                  <div class="info-title">
+                    <h3>Supporthaven</h3>
+                    <a href="https://devpost.com/software/supporthaven"
+                      >Learn More<i class="bx bx-link-external"></i
+                    ></a>
+                  </div>
+                  <p>
+                    Developed a food bank donation app that enabled grocery stores to 
+                    efficiently donate excess food to local food banks, reducing
+                    food waste and supporting community hunger relief efforts.
+                  </p>
+                </div>
+            </div>
+            <span class="number-page">5</span>
+            <a href="#" class="back-profile">
+              <p>Profile</p>
+              <i class="bx bxs-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- what I used : HTML, CSS, JS, Boxicons,  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
