@@ -75,7 +75,7 @@ body {
 }
 .cover.cover-right h1 {
   color: white;
-  margin-top: 100px;
+  margin-top: 250px;
   text-align: center;
 }
 
@@ -285,6 +285,8 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
 }
 .nextprev-btn:hover {
   color: var(--main-color);
@@ -296,11 +298,6 @@ body {
 .nextprev-btn.back {
   left: 1.5rem;
 }
-.services-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
 .services-box .services-content {
   flex: 1 1 10rem;
   border: var(--border);
@@ -308,11 +305,16 @@ body {
   text-align: center;
   padding: 0.8rem 0.5rem 1.1rem;
   transition: 0.3s ease;
+  margin-top: 20px;
 }
 .services-box .services-content:hover {
   box-shadow: var(--box-shadow);
 }
-
+.services-box {
+  max-height: 505px; /* Define a maximum height similar to Work Experience */
+  overflow-y: auto;  /* Enable scrolling if the content exceeds this height */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iPad */
+}
 .services-content i {
   font-size: 2.5rem;
   color: var(--main-color);
@@ -457,7 +459,6 @@ body {
     height: 40rem;
   }
 }
-
 
 
 
