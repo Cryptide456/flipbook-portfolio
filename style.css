@@ -346,7 +346,7 @@ body {
 }
 .skills-content .content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   gap: 0.8rem;
 }
 .skills-content .content span {
@@ -460,5 +460,239 @@ body {
   }
 }
 
+.wrapper1 {
+  width: 100%;
+  max-width: 1536px;
+  position: relative;
+  height: 90px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+@keyframes scrollRight1 {
+  0% {
+    left: -710px; /* Start off the left */
+  }
+  100% {
+    left: 100%; /* Move to the right, off the screen */
+  }
+}
+@keyframes scrollRight2 {
+  0% {
+    left: -465px; /* Start off the left */
+  }
+  100% {
+    left: 100%; /* Move to the right, off the screen */
+  }
+}
+.itemL {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 5.5rem;
+  border: var(--border);
+  border-radius: 0.3rem;
+  font-weight: 600;
+  position: absolute;
+  left: max(calc(97px * 7), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.itemL1 {
+  animation-delay: calc(15s / 7 * (7 - 1) * -1);
+}
+.itemL2 {
+  animation-delay: calc(15s / 7 * (7 - 2) * -1);
+}
+.itemL3 {
+  animation-delay: calc(15s / 7 * (7 - 3) * -1);
+}
+.itemL4 {
+  animation-delay: calc(15s / 7 * (7 - 4) * -1);
+}
+.itemL5 {
+  animation-delay: calc(15s / 7 * (7 - 5) * -1);
+}
 
+.itemL6 {
+  animation-delay: calc(15s / 7 * (7 - 6) * -1);
+}
+.itemL7 {
+  animation-delay: calc(15s / 7 * (7 - 7) * -1);
+}
+.itemF {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 5.5rem;
+  border: var(--border);
+  border-radius: 0.3rem;
+  font-weight: 600;
+  position: absolute;
+  left: max(calc(97px * 9), 100%);
+  animation-name: scrollRight1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 
+.itemF1 {
+  animation-delay: calc(20s / 9 * (9 - 1) * -1);
+}
+.itemF2 {
+  animation-delay: calc(20s / 9 * (9 - 2) * -1);
+}
+.itemF3 {
+  animation-delay: calc(20s / 9 * (9 - 3) * -1);
+}
+.itemF4 {
+  animation-delay: calc(20s / 9 * (9 - 4) * -1);
+}
+.itemF5 {
+  animation-delay: calc(20s / 9 * (9 - 5) * -1);
+}
+.itemF6 {
+  animation-delay: calc(20s / 9 * (9 - 6) * -1);
+}
+.itemF7 {
+  animation-delay: calc(20s / 9 * (9 - 7) * -1);
+}
+.itemF8 {
+  animation-delay: calc(20s / 9 * (9 - 8) * -1);
+}
+.itemF9 {
+  animation-delay: calc(20s / 9 * (9 - 9) * -1);
+}
+.itemDT {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 5.5rem;
+  border: var(--border);
+  border-radius: 0.3rem;
+  font-weight: 600;
+  position: absolute;
+  left: max(calc(97px * 7), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.itemDT1 {
+  animation-delay: calc(15s / 7 * (7 - 1) * -1);
+}
+.itemDT2 {
+  animation-delay: calc(15s / 7 * (7 - 2) * -1);
+}
+.itemDT3 {
+  animation-delay: calc(15s / 7 * (7 - 3) * -1);
+}
+.itemDT4 {
+  animation-delay: calc(15s / 7 * (7 - 4) * -1);
+}
+.itemDT5 {
+  animation-delay: calc(15s / 7 * (7 - 5) * -1);
+}
+.itemDT6 {
+  animation-delay: calc(15s / 7 * (7 - 6) * -1);
+}
+.itemDT7 {
+  animation-delay: calc(15s / 7 * (7 - 7) * -1);
+}
+.itemDDT {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 5.5rem;
+  border: var(--border);
+  border-radius: 0.3rem;
+  font-weight: 600;
+  position: absolute;
+  left: max(calc(97px * 7), 100%);
+  animation-name: scrollRight2;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.itemDDT1 {
+  animation-delay: calc(15s / 7 * (7 - 1) * -1);
+}
+.itemDDT2 {
+  animation-delay: calc(15s / 7 * (7 - 2) * -1);
+}
+.itemDDT3 {
+  animation-delay: calc(15s / 7 * (7 - 3) * -1);
+}
+.itemDDT4 {
+  animation-delay: calc(15s / 7 * (7 - 4) * -1);
+}
+.itemDDT5 {
+  animation-delay: calc(15s / 7 * (7 - 5) * -1);
+}
+.itemDDT6 {
+  animation-delay: calc(15s / 7 * (7 - 6) * -1);
+}
+.itemDDT7 {
+  animation-delay: calc(15s / 7 * (7 - 7) * -1);
+}
+.itemDP {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 5.5rem;
+  border: var(--border);
+  border-radius: 0.3rem;
+  font-weight: 600;
+  position: absolute;
+  left: max(calc(97px * 7), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.itemDP1 {
+  animation-delay: calc(15s / 7 * (7 - 1) * -1);
+}
+.itemDP2 {
+  animation-delay: calc(15s / 7 * (7 - 2) * -1);
+}
+.itemDP3 {
+  animation-delay: calc(15s / 7 * (7 - 3) * -1);
+}
+.itemDP4 {
+  animation-delay: calc(15s / 7 * (7 - 4) * -1);
+}
+.itemDP5 {
+  animation-delay: calc(15s / 7 * (7 - 5) * -1);
+}
+.itemDP6 {
+  animation-delay: calc(15s / 7 * (7 - 6) * -1);
+}
+.itemDP7 {
+  animation-delay: calc(15s / 7 * (7 - 7) * -1);
+}
