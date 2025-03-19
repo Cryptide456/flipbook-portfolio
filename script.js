@@ -4,19 +4,21 @@ pageTurnBtn.forEach((el, index) => {
   el.onclick = () => {
     const pageTurnId = el.getAttribute("data-page");
     const pageTurn = document.getElementById(pageTurnId);
+
     if (pageTurn.classList.contains("turn")) {
       pageTurn.classList.remove("turn");
       setTimeout(() => {
-        pageTurn.style.zIndex = 20 - index;
+        pageTurn.style.zIndex = 20 - (index + 1); // Ensure decreasing order
       }, 500);
     } else {
       pageTurn.classList.add("turn");
       setTimeout(() => {
-        pageTurn.style.zIndex = 20 + index;
+        pageTurn.style.zIndex = 20 + (index + 1); // Ensure increasing order
       }, 500);
     }
   };
 });
+
 
 //contact me button when click
 const pages = document.querySelectorAll(".book-page.page-right");
@@ -40,23 +42,23 @@ function reverseIndex() {
   if (pageNumber < 0) {
     pageNumber = totalPages - 1;
   }
+  return pageNumber;
 }
 
-//back profile button when click
 const backProfileBtn = document.querySelector(".back-profile");
 backProfileBtn.onclick = () => {
-  pages.forEach((_, index) => {
+  pages.forEach((page, index) => {
     setTimeout(() => {
-      reverseIndex();
-      pages[pageNumber].classList.remove("turn");
+      let newIndex = reverseIndex();
+      page.classList.remove("turn");
 
       setTimeout(() => {
-        reverseIndex();
-        pages[pageNumber].style.zIndex = 10 + index;
+        pages[newIndex].style.zIndex = 5 + index; // Start at a lower z-index to avoid covering others
       }, 500);
     }, (index + 1) * 200 + 100);
   });
 };
+
 
 //opening animation
 const coverRight = document.querySelector(".cover.cover-right");
@@ -76,16 +78,26 @@ setTimeout(() => {
 }, 3200);
 
 //opening animation (all page right animation)
-pages.forEach((_, index) => {
-  setTimeout(() => {
-    reverseIndex();
-    pages[pageNumber].classList.remove("turn");
-    setTimeout(() => {
-      reverseIndex();
-      pages[pageNumber].style.zIndex = 10 + index;
-    }, 500);
-  }, (index + 1) * 200 + 2100);
+// Initially hide all right pages
+pages.forEach(page => {
+  page.style.opacity = "0"; // Hide the pages initially
 });
+
+// Delay making them visible and then animate them
+setTimeout(() => {
+  pages.forEach((page, index) => {
+    page.style.opacity = "1"; // Make pages visible
+
+    setTimeout(() => {
+      let newIndex = reverseIndex();
+      page.classList.remove("turn");
+
+      setTimeout(() => {
+        pages[newIndex].style.zIndex = 5 + index; // Adjust z-index order
+      }, 500); // Adjust animation timing
+    }, (index + 1) * 200 + 100); // Slow down the animation
+  });
+}, 2000); // Delay before animation starts (Adjust as needed)
 
 const headings = [
   "Web Developer",
