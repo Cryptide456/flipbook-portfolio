@@ -31,8 +31,8 @@
             <h1>Nathan Dias</h1>
             <h3 class="typewriter" id="heading"> </h3>
             <div class="social-media">
-              <a href="https://www.linkedin.com/in/ndias316"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://github.com/Cryptide456"><i class="bx bxl-github"></i></a>
+              <a href="https://www.linkedin.com/in/ndias316" target="_blank"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/Cryptide456" target="_blank"><i class="bx bxl-github"></i></a>
             </div>
             <p>
               Hi, I am Nathan Dias.
@@ -120,25 +120,25 @@
                   <i class='bx bxl-google'></i>
                   <h3>Project Management Specialization</h3>
                   <p>Google</p>
-                  <a href="https://drive.google.com/file/d/13Yo09GuE_2u8PXbp0hNlYANP29JQuqCa/view?usp=sharing" class="btn">View</a>
+                  <a href="https://drive.google.com/file/d/13Yo09GuE_2u8PXbp0hNlYANP29JQuqCa/view?usp=sharing" class="btn" target="_blank">View</a>
               </div>
               <div class="services-content">
                 <i class='bx bxl-google'></i>
                 <h3>Data Analytics Specialization</h3>
                 <p>Google</p>
-                <a href="https://drive.google.com/file/d/1sL2rgOVrMRnC_Tz31meTfH-Jhop24iSJ/view?usp=sharing" class="btn">View</a>
+                <a href="https://drive.google.com/file/d/1sL2rgOVrMRnC_Tz31meTfH-Jhop24iSJ/view?usp=sharing" class="btn" target="_blank">View</a>
               </div>
               <div class="services-content">
                 <i class='bx bxl-google'></i>
                 <h3>UX Design Specialization</h3>
                 <p>Google</p>
-                <a href="https://drive.google.com/file/d/1TAtjD8GMe4PLe6VYNI0YOInMYwji7-t9/view?usp=sharing" class="btn">View</a>
+                <a href="https://drive.google.com/file/d/1TAtjD8GMe4PLe6VYNI0YOInMYwji7-t9/view?usp=sharing" class="btn" target="_blank">View</a>
               </div>
               <div class="services-content">
                 <i class='bx bxl-google'></i>
                 <h3>AI Essentials Certificate</h3>
                 <p>Google</p>
-                <a href="https://drive.google.com/file/d/1ThSAhxry9lYtokzJwNZDFQuFFngvo7xy/view?usp=sharing" class="btn">View</a>
+                <a href="https://drive.google.com/file/d/1ThSAhxry9lYtokzJwNZDFQuFFngvo7xy/view?usp=sharing" class="btn" target="_blank">View</a>
               </div>
             </div>
             <span class="number-page">3</span>
@@ -228,18 +228,33 @@
           <div class="page-front">
             <h1 class="title">Projects</h1>
             <div class="portfolio-box">
+            <div class="img-box">
+                <img src="./CrimeAI.png" alt="" height="300px"/>
+              </div>
+              <div class="info-box">
+                <div class="info-title">
+                  <h3>U.S. CrimeAI</h3>
+                  <a href="https://us-map-llm-app.vercel.app/" target="_blank"
+                    >Learn More<i class="bx bx-link-external"></i
+                  ></a>
+                </div>
+                <p>
+                    U.S. CrimeAI is an interactive chatbot application that lets you click on a state
+                    and receive a detailed summary report of the crime rate in that state.
+                </p>
+              </div>
               <div class="img-box">
                 <img src="./cardiacsaver.jpg" alt="" />
               </div>
               <div class="info-box">
                 <div class="info-title">
                   <h3>Cardiacsaver</h3>
-                  <a href="https://devpost.com/software/heart-attack-detection"
+                  <a href="https://devpost.com/software/heart-attack-detection" target="_blank"
                     >Learn More<i class="bx bx-link-external"></i
                   ></a>
                 </div>
                 <p>
-                    I built a heart attack predictor to notify patients at 
+                    Cardiacsaver is a heart attack predictor used to notify patients at 
                     risk of suffering from an imminent heart attack based on 
                     their medical history.
                 </p>
@@ -250,12 +265,12 @@
                 <div class="info-box">
                   <div class="info-title">
                     <h3>Supporthaven</h3>
-                    <a href="https://devpost.com/software/supporthaven"
+                    <a href="https://devpost.com/software/supporthaven" target="_blank"
                       >Learn More<i class="bx bx-link-external"></i
                     ></a>
                   </div>
                   <p>
-                    I developed a food bank donation app that enabled grocery stores to 
+                    Supporthaven is a food bank donation app that enables grocery stores to 
                     efficiently donate excess food to local food banks, reducing
                     food waste and supporting community hunger relief efforts.
                   </p>
@@ -269,9 +284,15 @@
           </div>
           <div class="page-back">
             <h1 class="title">Resumé</h1>
-            <div class="resume-content">
-              <p>More content coming soon...</p>
-            </div>
+            <div class="resume-content" style="position: relative;">
+              <button id="openFullView" class="overlay-button">View in Fullscreen</button>
+              <iframe
+                src="DiasNathanResumePortfolio.pdf"
+                class="resume-preview"
+                id="resumeIframe"
+                frameborder="0"
+              ></iframe>
+            </div>                       
             <span class="number-page">6</span>
             <span class="nextprev-btn back" data-page="turn-3"
               ><i class="bx bx-chevron-left"></i
@@ -296,5 +317,10 @@
     <!-- what I used : HTML, CSS, JS, Boxicons,  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      document.getElementById("openFullView").addEventListener("click", () => {
+        window.open("DiasNathanResumePortfolio.pdf", "_blank");
+      });
+    </script>  
   </body>
 </html>
