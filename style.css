@@ -717,3 +717,34 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
+
+.page-nav {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.page-nav button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.page-nav button:hover {
+  background-color: #008cc0;
+  transform: scale(1.05);
+}

@@ -1,19 +1,25 @@
+let currentPageIndex = 0;
+
 //turn pages when click next or prev button
 const pageTurnBtn = document.querySelectorAll(".nextprev-btn");
-pageTurnBtn.forEach((el, index) => {
+
+pageTurnBtn.forEach(el => {
   el.onclick = () => {
     const pageTurnId = el.getAttribute("data-page");
-    const pageTurn = document.getElementById(pageTurnId);
+    const page = document.getElementById(pageTurnId);
+    const index = Array.from(pages).indexOf(page);
 
-    if (pageTurn.classList.contains("turn")) {
-      pageTurn.classList.remove("turn");
+    if (page.classList.contains("turn")) {
+      page.classList.remove("turn");
+      currentPageIndex = index - 1;
       setTimeout(() => {
-        pageTurn.style.zIndex = 20 - (index + 1); // Ensure decreasing order
+        page.style.zIndex = 20 - index;
       }, 500);
     } else {
-      pageTurn.classList.add("turn");
+      page.classList.add("turn");
+      currentPageIndex = index;
       setTimeout(() => {
-        pageTurn.style.zIndex = 20 + (index + 1); // Ensure increasing order
+        page.style.zIndex = 20 + index;
       }, 500);
     }
   };
@@ -135,3 +141,23 @@ function typeHeading() {
 // Start the typewriter effect
 typeHeading();
 
+const allPages = Array.from(document.querySelectorAll(".book-page.page-right"));
+const navButtons = document.querySelectorAll(".page-nav button");
+
+navButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const targetIndex = parseInt(button.getAttribute("data-goto"));
+
+    pages.forEach((page, i) => {
+      if (i <= targetIndex - 1) {
+        page.classList.add("turn");
+        page.style.zIndex = 20 + i;
+      } else {
+        page.classList.remove("turn");
+        page.style.zIndex = 20 - i;
+      }
+    });
+
+    currentPageIndex = targetIndex - 1; // Track current for arrow logic
+  });
+});
