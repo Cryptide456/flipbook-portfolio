@@ -313,8 +313,8 @@ body {
 }
 .services-box {
   max-height: 505px; /* Define a maximum height for the container */
-  overflow-y: scroll;  /* Enable scrolling if content exceeds the max height */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile devices */
+  /* overflow-y: scroll;  Enable scrolling if content exceeds the max height */
+  /* -webkit-overflow-scrolling: touch; Smooth scrolling on mobile devices */
 }
 .services-content i {
   font-size: 2.5rem;
